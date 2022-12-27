@@ -38,6 +38,7 @@ form {
     linear-gradient(127deg, rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0) 70.71%);
   border-radius: 5px;
+  text-align: center;
 }
 form label {
   display: flex;

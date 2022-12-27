@@ -29,10 +29,8 @@ class App extends React.Component {
         return response.text();
       })
       .then((result) => {
-        let data = this.state.data;
-        let labelsRef = this.state.labelsRef;
-        data = {};
-        labelsRef = [];
+        let data = {};
+        let labelsRef = [];
 
         result
           .split("\n")
@@ -67,6 +65,7 @@ class App extends React.Component {
     }
     this.setState({ formInput });
   };
+
   reset = () => {
     this.setState({
       data: {},
@@ -82,6 +81,7 @@ class App extends React.Component {
     if (Object.keys(this.state.data).length) {
       let maxValue = Math.max(...Object.values(this.state.data));
       let yAxis = [];
+
       maxValue = Number.isInteger(maxValue / 10)
         ? maxValue
         : Math.trunc((maxValue + 10) / 10) * 10;

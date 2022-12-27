@@ -15,6 +15,7 @@ function Form(props) {
           className={
             props.formInput.amount &&
             !isNaN(props.formInput.amount - "") &&
+            props.formInput.amount - "" > 0 &&
             props.formInput.amount - "" <= 950
               ? null
               : "error"
@@ -69,7 +70,8 @@ function Form(props) {
           isNaN(props.formInput.min - "") ||
           isNaN(props.formInput.amount - "") ||
           props.formInput.max === props.formInput.min ||
-          props.formInput.amount - "" > 950
+          props.formInput.amount - "" > 950 ||
+          props.formInput.amount - "" <= 0
         }
       />
     </form>
